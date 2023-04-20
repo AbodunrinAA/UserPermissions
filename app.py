@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.7
 import urllib.parse as quote
 
 from flask import Flask, jsonify
