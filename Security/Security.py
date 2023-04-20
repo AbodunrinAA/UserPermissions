@@ -13,6 +13,6 @@ def identity(payload):  # unique to Flask-JWT
     return UserModel.getUser_By_Id(user_id)
 
 
-secrete_key = '$$$Ademola@#'
+secrete_key = '<Key>'
 
 
