@@ -1,0 +1,18 @@
+{
+    "cSpell.words": [
+        "dateofbirth",
+        "grantuserpermission",
+        "revokeuserpermission",
+        "userpermission",
+        "usersbylastname"
+    ],
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}
