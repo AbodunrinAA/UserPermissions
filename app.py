@@ -17,6 +17,7 @@ from Resources.User import (
     User,
     Users,
     AllUsers,
+    UserById,
     UserLogin,
     UserLogout,
     TokenRefresh,
@@ -31,7 +32,7 @@ from db import db
 
 app.config[
     "SQLALCHEMY_DATABASE_URI"
-] = "postgresql://adigun:Ademola@1@adigun.postgres.database.azure.com:5432/postgres"
+] = "postgresql://username:password@host:5432/postgres"
 app.config[
     "SQLALCHEMY_TRACK_MODIFICATIONS"
 ] = False  # toggled off FlaskSQLAlchemy modification
@@ -134,6 +135,7 @@ api.add_resource(User, "/user")
 api.add_resource(Users, "/users/<string:email>")
 api.add_resource(AllUsers, "/allusers")
 api.add_resource(UsersByLastName, "/usersbylastname/<string:lastname>")
+api.add_resource(UserById, "/userbyid/<string:id>")
 
 api.add_resource(GrantUserPermission, "/grantuserpermission")
 api.add_resource(RevokeUserPermission, "/revokeuserpermission")

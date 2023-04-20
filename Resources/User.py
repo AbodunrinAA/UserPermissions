@@ -90,6 +90,14 @@ class UsersByLastName(Resource):
             return users
         except Exception as e:
             return {'message': str(e)}, 500  # Server Error
+        
+class UserById(Resource):
+    def get(self, id):
+        try:
+            user = UserModel.get_user_by_id(id)
+            return user.to_json()
+        except Exception as e:
+            return {'message': str(e)}, 500  # Server Error
 
 class UserLogin(Resource):
     @classmethod
